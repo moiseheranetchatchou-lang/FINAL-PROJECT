@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Event Manager App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+    <header>
+        <h1>Event Manager</h1>
+        <p>Create, explore and register for events</p>
+    </header>
+    <section id="create-event">
+        <h2>Create an Event</h2>
+
+        <form id="eventForm">
+            <input type="text" id="title" placeholder="Event Title" required />
+
+            <textarea id="description" placeholder="Event Description" required></textarea>
+
+            <input type="date" id="date" required />
+
+            <input type="text" id="location" placeholder="Location" required />
+
+            <select id="category" required>
+                <option value="">Select Category</option>
+                <option value="conference">Conference</option>
+                <option value="sport">Sport</option>
+                <option value="workshop">Workshop</option>
+                <option value="other">Other</option>
+            </select>
+
+            <input type="number" id="capacity" placeholder="Maximum Capacity" min="1" required />
+
+            <button type="submit">Create Event</button>
+        </form>
+    </section>
+    <section id="filters">
+        <h2>Filter Events</h2>
+
+        <select id="filterCategory">
+            <option value="">All Categories</option>
+            <option value="conference">Conference</option>
+            <option value="sport">Sport</option>
+            <option value="workshop">Workshop</option>
+            <option value="other">Other</option>
+        </select>
+
+        <input type="date" id="filterDate" />
+
+        <button id="clearFilters">Clear Filters</button>
+    </section>
+    <section id="event-list">
+        <h2>Available Events</h2>
+        <div id="eventsContainer">
+        </div>
+    </section>
+    <section id="event-details" style="display:none;">
+        <h2>Event Details</h2>
+
+        <div id="eventInfo"></div>
+
+        <h3>Register for this Event</h3>
+
+        <form id="registrationForm">
+            <input type="text" id="fullName" placeholder="Full Name" required />
+            <input type="email" id="email" placeholder="Institutional Email" required />
+            <button type="submit">Register</button>
+        </form>
+
+        <button id="backButton">Back to Events</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 - Event Manager | TypeScript Project</p>
+    </footer>
+    <script src="dist/main.js"></script>
+
+</body>
+</html>

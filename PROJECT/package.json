@@ -1,0 +1,13 @@
+{
+  "name": "event-app",
+  "version": "1.0.0",
+  "description": "Mini Event Manager (TypeScript) — final project",
+  "scripts": {
+    "build": "tsc",
+    "start": "npx live-server --port=8080"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "live-server": "^1.2.1"
+  }
+}
